@@ -21,6 +21,9 @@ public class Student {
         this.laptop = laptop;
     }
 
+    public Student() {
+    }
+
     public String getId() {
         return id;
     }
