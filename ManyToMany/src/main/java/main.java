@@ -42,6 +42,14 @@ public class main {
 
         Session session = FactoryConfiguration.getInstance().getSession();
         Transaction transaction= session.beginTransaction();
+        for (Student stu : students){
+            session.save(stu);
+        }
+        for (Laptop laptop : laptops){
+            session.save(laptop);
+        }
+        transaction.commit();
+        session.close();
 
     }
 }
